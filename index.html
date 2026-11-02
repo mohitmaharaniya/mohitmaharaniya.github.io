@@ -6,36 +6,38 @@
 <title>Mohit Maharaniya | OT Technician in Jaipur</title>
 <meta name="description" content="Mohit Maharaniya - OT Technician in Jaipur">
 <style>
-:root{--bg:#0a1020;--card:#121b30;--text:#f2f5fb;--muted:#9aa8c2;--accent:#5b9bff;--line:#22304d}
+:root{--bg:#0a1020;--card:#121b30;--text:#f2f5fb;--muted:#b4c0d6;--accent:#5b9bff;--line:#2a3a5c}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.sl{position:fixed;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;transform:scale(1.05)}
+.sl.on{opacity:1;animation:kb 12s ease-out forwards}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+.ov{position:fixed;inset:0;z-index:1;background:linear-gradient(rgba(10,16,32,.78),rgba(10,16,32,.9));pointer-events:none}
 .nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(10,16,32,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav b{font-size:16px}
 .nav div a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px}
 .nav div a:hover{color:var(--accent)}
-.hero,section.sec,footer{position:relative;z-index:1}
-.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:60px 20px;background:radial-gradient(circle at 50% 40%,rgba(91,155,255,.18),transparent 60%)}
-.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3}
-.hero .in{position:relative;z-index:2;max-width:560px}
-.photo{width:170px;height:170px;border-radius:50%;margin:0 auto 22px;border:4px solid var(--accent);overflow:hidden;box-shadow:0 0 0 8px rgba(91,155,255,.15),0 20px 50px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:700;color:var(--accent);background:var(--card);animation:glow 3s ease-in-out infinite}
-@keyframes glow{0%,100%{box-shadow:0 0 0 8px rgba(91,155,255,.15),0 20px 50px rgba(0,0,0,.5)}50%{box-shadow:0 0 0 16px rgba(91,155,255,.08),0 0 40px rgba(91,155,255,.45)}}
+.hero,section.sec,footer{position:relative;z-index:3}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px}
+.hero .in{max-width:560px}
+.photo{width:170px;height:170px;border-radius:50%;margin:0 auto 22px;border:4px solid var(--accent);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:700;color:var(--accent);background:var(--card);animation:glow 3s ease-in-out infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 0 8px rgba(91,155,255,.15),0 20px 50px rgba(0,0,0,.5)}50%{box-shadow:0 0 0 16px rgba(91,155,255,.08),0 0 40px rgba(91,155,255,.5)}}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
-h1{font-size:clamp(32px,8vw,48px);letter-spacing:.3px}
+h1{font-size:clamp(32px,8vw,48px);letter-spacing:.3px;text-shadow:0 2px 14px rgba(0,0,0,.6)}
 .job{margin-top:10px;font-size:19px;color:var(--muted)}
 .job b{color:var(--accent)}
 .cta{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-block;padding:14px 26px;border-radius:12px;font-weight:600;text-decoration:none;font-size:16px;transition:.2s;border:0;cursor:pointer;font-family:inherit}
 .p{background:var(--accent);color:#06101f}
-.s{border:1px solid var(--accent);color:var(--accent);background:transparent}
+.s{border:1px solid var(--accent);color:var(--accent);background:rgba(10,16,32,.5)}
 .btn:hover{transform:translateY(-3px)}
 section.sec{max-width:880px;margin:0 auto;padding:70px 20px}
 h2{font-size:28px;margin-bottom:8px}
 h2::after{content:"";display:block;width:50px;height:4px;background:var(--accent);border-radius:4px;margin-top:8px}
 .lead{margin-top:20px;color:var(--muted);font-size:17px}
 .facts{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.fact{background:rgba(18,27,48,.85);border:1px solid var(--line);border-radius:14px;padding:16px}
+.fact{background:rgba(18,27,48,.82);border:1px solid var(--line);border-radius:14px;padding:16px;backdrop-filter:blur(6px)}
 .fact small{display:block;color:var(--muted);font-size:12px;letter-spacing:1px;text-transform:uppercase}
 .fact span{font-weight:600;font-size:17px}
 .grid{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -43,7 +45,7 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--accent
 .vid iframe,.vid video{width:100%;aspect-ratio:16/9;border:0;display:block;background:#000}
 .vid p{padding:12px 14px;font-weight:600;font-size:15px}
 .links{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.links a{display:block;text-align:center;padding:16px;border-radius:14px;background:rgba(18,27,48,.85);border:1px solid var(--line);color:var(--text);text-decoration:none;font-weight:600;transition:.2s}
+.links a{display:block;text-align:center;padding:16px;border-radius:14px;background:rgba(18,27,48,.82);border:1px solid var(--line);color:var(--text);text-decoration:none;font-weight:600;transition:.2s;backdrop-filter:blur(6px)}
 .links a:hover{background:var(--accent);color:#06101f;transform:translateY(-3px)}
 .ecg{display:block;width:100%;max-width:420px;margin:0 auto 10px}
 .ecg path{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:520;stroke-dashoffset:520;animation:beat 2.6s linear infinite}
@@ -52,17 +54,25 @@ h2::after{content:"";display:block;width:50px;height:4px;background:var(--accent
 .gwrap h2::after{margin-left:auto;margin-right:auto}
 .bar{margin-top:18px;display:flex;justify-content:center;gap:22px;font-weight:600;flex-wrap:wrap}
 .bar b{color:var(--accent)}
-#arena{position:relative;margin:16px auto 0;width:100%;max-width:520px;height:300px;background:rgba(18,27,48,.9);border:1px solid var(--line);border-radius:18px;overflow:hidden;touch-action:manipulation}
-#msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--muted);pointer-events:none}
-.tg{position:absolute;font-size:36px;background:none;border:0;cursor:pointer;animation:pop .25s ease-out;line-height:1}
+#arena{position:relative;margin:16px auto 0;width:100%;max-width:520px;height:300px;background:linear-gradient(135deg,#0b2545,#0b5563,#0b2545);background-size:300% 300%;animation:flow 10s ease infinite;border:1px solid #2f6f8f;border-radius:18px;overflow:hidden;touch-action:manipulation;box-shadow:0 0 30px rgba(60,200,220,.18)}
+@keyframes flow{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+#arena::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(120,220,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(120,220,255,.14) 1px,transparent 1px);background-size:30px 30px;animation:grid 4s linear infinite}
+@keyframes grid{to{background-position:30px 30px}}
+#arena::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;z-index:0;pointer-events:none;opacity:.55;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='60' viewBox='0 0 300 60'%3E%3Cpath d='M0 30H90l8-22 10 44 10-22H300' fill='none' stroke='%235bd6ff' stroke-width='2'/%3E%3C/svg%3E") repeat-x;animation:ecgmove 3s linear infinite}
+@keyframes ecgmove{to{background-position:-300px 0}}
+#msg{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#cfe9f5;font-weight:600;pointer-events:none}
+.tg{position:absolute;z-index:2;font-size:36px;background:none;border:0;cursor:pointer;animation:pop .25s ease-out;line-height:1}
 @keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
-footer{text-align:center;padding:28px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);background:rgba(10,16,32,.7)}
+footer{text-align:center;padding:28px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);background:rgba(10,16,32,.75)}
 .rv{opacity:0;transform:translateY(24px);transition:.7s}
 .rv.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.sl.on,.photo,#arena,#arena::before,#arena::after{animation:none}}
 </style>
 </head>
 <body>
-<canvas id="bg"></canvas>
+<div class="sl" id="s1"></div>
+<div class="sl" id="s2"></div>
+<div class="ov"></div>
 
 <header class="nav">
   <b>Mohit Maharaniya</b>
@@ -70,7 +80,6 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:13px;border-t
 </header>
 
 <section class="hero">
-  <video class="bgv" id="bgv" autoplay muted loop playsinline><source id="bgsrc" src="bg.mp4" type="video/mp4"></video>
   <div class="in">
     <div class="photo" id="photo"><img id="pimg" alt="Mohit Maharaniya"></div>
     <h1>Mohit Maharaniya</h1>
@@ -121,6 +130,9 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:13px;border-t
 /* ===== YAHAN SE SAB KUCH BADAL SAKTE HO ===== */
 const PHOTO = "Screenshot_20261102-121505_Photos.png";
 
+/* Background slideshow ki photos: apni upload ki hui photos ke asli naam likho */
+const BG_PHOTOS = ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg", "bg5.jpg"];
+
 const LINKS = [
   { label: "Instagram", url: "https://www.instagram.com/mr.mm_018" },
   { label: "Facebook",  url: "https://www.facebook.com/share/19dk94aLAt/" },
@@ -128,78 +140,44 @@ const LINKS = [
   { label: "Email",     url: "mailto:mohitmaharania@gmail.com" }
 ];
 
-/* Nayi video jodne ke liye ek line copy karke id ya src badlo */
 const VIDEOS = [
   { type: "youtube", id: "aOysIaPMKvE", title: "My Video" }
 ];
 /* ============================================ */
 
-/* ---- Animated background ---- */
+/* ---- Background slideshow ---- */
 (function(){
-  const c = document.getElementById("bg");
-  const x = c.getContext("2d");
-  let w, h, pts = [], mouse = { x: -999, y: -999 };
-  function size(){
-    w = c.width = window.innerWidth;
-    h = c.height = window.innerHeight;
-    const n = Math.min(70, Math.floor(w * h / 18000));
-    pts = [];
-    for (let i = 0; i < n; i++) {
-      pts.push({
-        x: Math.random() * w, y: Math.random() * h,
-        vx: (Math.random() - .5) * .5, vy: (Math.random() - .5) * .5,
-        r: Math.random() * 2 + 1, plus: Math.random() < .25
-      });
-    }
+  const layers = [document.getElementById("s1"), document.getElementById("s2")];
+  const ok = [];
+  let idx = 0, cur = 0;
+  function show(){
+    const nxt = layers[cur ^ 1];
+    nxt.style.backgroundImage = 'url("' + encodeURI(ok[idx]) + '")';
+    nxt.classList.remove("on");
+    void nxt.offsetWidth;
+    nxt.classList.add("on");
+    layers[cur].classList.remove("on");
+    cur ^= 1;
+    idx = (idx + 1) % ok.length;
   }
-  function move(e){
-    const t = e.touches ? e.touches[0] : e;
-    mouse.x = t.clientX; mouse.y = t.clientY;
+  function start(){
+    if (!ok.length) return;
+    show();
+    if (ok.length > 1) setInterval(show, 5500);
   }
-  window.addEventListener("mousemove", move);
-  window.addEventListener("touchmove", move, { passive: true });
-  window.addEventListener("resize", size);
-  function frame(){
-    x.clearRect(0, 0, w, h);
-    for (let i = 0; i < pts.length; i++) {
-      const p = pts[i];
-      const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.sqrt(dx * dx + dy * dy);
-      if (d < 110) { p.x += dx / d * 1.5; p.y += dy / d * 1.5; }
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
-      if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
-      x.fillStyle = "rgba(91,155,255,.8)";
-      x.strokeStyle = "rgba(91,155,255,.7)";
-      if (p.plus) {
-        x.lineWidth = 2;
-        x.beginPath();
-        x.moveTo(p.x - 5, p.y); x.lineTo(p.x + 5, p.y);
-        x.moveTo(p.x, p.y - 5); x.lineTo(p.x, p.y + 5);
-        x.stroke();
-      } else {
-        x.beginPath(); x.arc(p.x, p.y, p.r, 0, 6.283); x.fill();
-      }
-      for (let j = i + 1; j < pts.length; j++) {
-        const q = pts[j], ax = p.x - q.x, ay = p.y - q.y, dd = Math.sqrt(ax * ax + ay * ay);
-        if (dd < 120) {
-          x.strokeStyle = "rgba(91,155,255," + (0.28 * (1 - dd / 120)) + ")";
-          x.lineWidth = 1;
-          x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(q.x, q.y); x.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(frame);
+  function load(i){
+    if (i >= BG_PHOTOS.length) { start(); return; }
+    const im = new Image();
+    im.onload = function(){ ok.push(BG_PHOTOS[i]); load(i + 1); };
+    im.onerror = function(){ load(i + 1); };
+    im.src = BG_PHOTOS[i];
   }
-  size(); frame();
+  load(0);
 })();
 
 const img = document.getElementById("pimg");
 img.src = PHOTO;
 img.onerror = function(){ img.remove(); document.getElementById("photo").textContent = "MM"; };
-
-document.getElementById("bgsrc").addEventListener("error", function(){
-  const v = document.getElementById("bgv"); if (v) v.remove();
-});
 
 const box = document.getElementById("links");
 LINKS.forEach(function(l){
